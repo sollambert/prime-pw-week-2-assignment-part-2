@@ -26,10 +26,10 @@ if (number >= 2) {
 
 
 // 1. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We create variable 'name' and assign the value 'Dane'
+// We perform strict equal operator on 'name' compared to the string 'Mary'
+// 'Dane' has a matching data type with 'Mary' but is not the same value, so the strict equals operator returns false
+// We log "How do you do?" to the console
 
 //CODE
 /*
@@ -45,10 +45,10 @@ if (name === 'Mary') {
 */
 
 // 2. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We create empty variable 'secret' and variable 'code' with value 123
+// We compare code to the integer 123 with strict equals, this returns true because of both matching type and value
+// 'secret' is assigned value 'super' and 'code' is *= 2
+// 'code' is < 250 so we do not perform next conditional and print secret to the console which has value 'super'
 
 //CODE
 /*
@@ -70,10 +70,10 @@ console.log(secret)
 */
 
 // 3. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We create variables 'isStudent', 'age', and 'zip' with values true, 34, and 55407 respectively
+// We check if isStudent strict equals true (which returns true) with AND operator on zip > 80000 (which returns false) so we do not perform this conditional
+// After previous fails, we check if isStudent strict equals false (which returns false) with OR operator on age < 30 (which also returns false) so we do not perform this conditional
+// After previous fails, we check if isStudent strict equals true (which returns true) so we console log "Welcome to Prime!"
 
 //CODE
 /*
@@ -130,10 +130,19 @@ if (number >= 2) {
 // -- it is, so we set colorOne and colorTwo to 'purple'
 
 /*
+//FIX - colorOne should be set to 'blue' and colorTwo should be set to 'red'
+//let colorOne = 'blue';
+//let colorTwo = 'red';
 let colorOne = 'red';
 let colorTwo = 'blue';
 let mix = true;
 
+//FIX - only the colorOne variable is set to 'purple' after conditional
+//
+//if (mix === true) {
+//  colorOne = 'purple';
+//  colorTwo = 'purple';
+//}
 if (mix === true) {
   colorOne = 'purple';
 }
@@ -147,6 +156,8 @@ if (mix === true) {
 let temp = 40;
 const time = 4;
 
+//FIX - we need to use the AND operator on the conditional instead of the OR
+//if (temp > 39 && time >= 4) {
 if (temp > 39 || time >= 4) {
   console.log('throw away the food!');
 }
@@ -160,6 +171,14 @@ if (temp > 39 || time >= 4) {
 let age = 21;
 const minAge = 21;
 
+//FIX - we need to check if age >= minage. If we wanted to use the conditional already written below we'd have to flip the results of the conditional
+//use this to replace first line of conditional: if(age < minage) {
+//or rewrite whole statement as:
+//if(age >= minage) {
+//  console.log('enter');
+//} else {
+//  console.log('no entry');
+//}
 if(minAge <= age) {
   console.log('no entry');
 } else {
